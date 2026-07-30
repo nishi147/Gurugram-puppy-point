@@ -666,9 +666,6 @@ function Index() {
                 <div className="p-5">
                   <div className="flex items-center justify-between gap-2">
                     <h3 className="text-xl font-semibold text-card-foreground">{puppy.name}</h3>
-                    <span className="inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-bold text-emerald-800 shrink-0">
-                      FOR SALE • {puppy.price}
-                    </span>
                   </div>
                   <p className="mt-2 text-sm text-muted-foreground">{puppy.description}</p>
                   <div className="mt-4 flex gap-2">
