@@ -962,6 +962,9 @@ function Index() {
           <div className="mt-10 border-t border-background/20 pt-6 text-center text-sm text-background/50">
             <p>© {new Date().getFullYear()} Gurgaon Puppy Point. All rights reserved.</p>
             <p className="mt-1">Made with ❤️ for dog lovers in Gurugram, Haryana, India</p>
+            <p className="mt-2 text-xs font-light tracking-wide text-background/40">
+              Powered by Nexcore Technologies
+            </p>
           </div>
         </div>
       </footer>
