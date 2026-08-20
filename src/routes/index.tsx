@@ -14,6 +14,11 @@ const PHONE = "8178413047";
 const PHONE_DISPLAY = "+91 81784 13047";
 const WHATSAPP_LINK = `https://wa.me/918178413047?text=Hi%20Gurgaon%20Puppy%20Point!%20I%20am%20interested%20in%20a%20puppy.`;
 
+const getBreedWhatsAppLink = (breedName: string) => {
+  const message = `Hi Gurgaon Puppy Point! I am interested in a ${breedName} puppy. Please share photos, price, and availability details.`;
+  return `https://wa.me/918178413047?text=${encodeURIComponent(message)}`;
+};
+
 const PUPPIES = [
   {
     name: "Golden Retriever",
@@ -648,47 +653,67 @@ function Index() {
           </div>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {PUPPIES.map((puppy) => (
-              <div
-                key={puppy.name}
-                className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md"
-              >
-                <div className="aspect-square overflow-hidden">
-                  <img
-                    src={puppy.image}
-                    alt={`${puppy.name} puppy for sale in Gurgaon Gurugram`}
-                    width={600}
-                    height={600}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-5">
-                  <div className="flex items-center justify-between gap-2">
-                    <h3 className="text-xl font-semibold text-card-foreground">{puppy.name}</h3>
-                  </div>
-                  <p className="mt-2 text-sm text-muted-foreground">{puppy.description}</p>
-                  <div className="mt-4 flex gap-2">
+            {PUPPIES.map((puppy) => {
+              const breedWhatsAppLink = getBreedWhatsAppLink(puppy.name);
+              return (
+                <div
+                  key={puppy.name}
+                  className="group flex flex-col justify-between overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md"
+                >
+                  <div>
                     <a
-                      href={`tel:${PHONE}`}
-                      className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-md bg-green-600 px-3 py-2.5 text-sm font-medium text-white transition-colors hover:bg-green-700"
-                    >
-                      <Phone className="h-4 w-4" />
-                      Call Now
-                    </a>
-                    <a
-                      href={WHATSAPP_LINK}
+                      href={breedWhatsAppLink}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-md bg-emerald-500 px-3 py-2.5 text-sm font-medium text-white transition-colors hover:bg-emerald-600"
+                      className="block aspect-square overflow-hidden cursor-pointer"
+                      title={`Enquire about ${puppy.name} puppy on WhatsApp`}
                     >
-                      <MessageCircle className="h-4 w-4" />
-                      WhatsApp
+                      <img
+                        src={puppy.image}
+                        alt={`${puppy.name} puppy for sale in Gurgaon Gurugram`}
+                        width={600}
+                        height={600}
+                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        loading="lazy"
+                      />
                     </a>
+                    <div className="p-5">
+                      <div className="flex items-center justify-between gap-2">
+                        <a
+                          href={breedWhatsAppLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-xl font-semibold text-card-foreground hover:text-primary transition-colors"
+                        >
+                          {puppy.name}
+                        </a>
+                      </div>
+                      <p className="mt-2 text-sm text-muted-foreground">{puppy.description}</p>
+                    </div>
+                  </div>
+                  <div className="p-5 pt-0">
+                    <div className="mt-4 flex gap-2">
+                      <a
+                        href={`tel:${PHONE}`}
+                        className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-md bg-green-600 px-3 py-2.5 text-sm font-medium text-white transition-colors hover:bg-green-700"
+                      >
+                        <Phone className="h-4 w-4" />
+                        Call Now
+                      </a>
+                      <a
+                        href={breedWhatsAppLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-md bg-emerald-500 px-3 py-2.5 text-sm font-medium text-white transition-colors hover:bg-emerald-600"
+                      >
+                        <MessageCircle className="h-4 w-4" />
+                        Enquire Breed
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
