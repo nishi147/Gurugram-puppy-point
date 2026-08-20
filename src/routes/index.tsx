@@ -10,9 +10,9 @@ const BEAGLE_IMG =
 const LABRADOR_IMG =
   "https://tse3.mm.bing.net/th/id/OIP.wTKob21_rDSXihUsvbLECwHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3";
 
-const PHONE = "9870166623";
-const PHONE_DISPLAY = "+91 98701 66623";
-const WHATSAPP_LINK = `https://wa.me/919870166623?text=Hi%20Gurgaon%20Puppy%20Point!%20I%20am%20interested%20in%20a%20puppy.`;
+const PHONE = "8178413047";
+const PHONE_DISPLAY = "+91 81784 13047";
+const WHATSAPP_LINK = `https://wa.me/918178413047?text=Hi%20Gurgaon%20Puppy%20Point!%20I%20am%20interested%20in%20a%20puppy.`;
 
 const PUPPIES = [
   {
@@ -213,7 +213,7 @@ const SCHEMA_LOCAL_BUSINESS = {
   name: "Gurgaon Puppy Point",
   image: GOLDEN_RETRIEVER_IMG,
   url: "https://gurgaonpuppypoint.com",
-  telephone: "+919870166623",
+  telephone: "+918178413047",
   priceRange: "₹20,000 - ₹80,000",
   address: {
     "@type": "PostalAddress",
@@ -274,12 +274,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Buy healthy, purebred, vaccinated puppies for sale in Gurgaon & Gurugram. Golden Retriever, Labrador, Beagle, Shih Tzu, French Bulldog, Husky & more for sale at Gurgaon Puppy Point. Call 9870166623.",
+          "Buy healthy, purebred, vaccinated puppies for sale in Gurgaon & Gurugram. Golden Retriever, Labrador, Beagle, Shih Tzu, French Bulldog, Husky & more for sale at Gurgaon Puppy Point. Call 8178413047.",
       },
       {
         name: "keywords",
         content:
-          "puppies for sale in gurgaon, puppies for sale in gurugram, buy puppies in gurgaon, buy dogs in gurgaon, dog shop in gurgaon, dog breeder gurugram, golden retriever puppy for sale gurgaon, labrador puppy for sale gurgaon, beagle puppy for sale gurgaon, shih tzu for sale gurgaon, dog seller in gurgaon, buy puppies gurugram, best pet shop gurgaon, 9870166623",
+          "puppies for sale in gurgaon, puppies for sale in gurugram, buy puppies in gurgaon, buy dogs in gurgaon, dog shop in gurgaon, dog breeder gurugram, golden retriever puppy for sale gurgaon, labrador puppy for sale gurgaon, beagle puppy for sale gurgaon, shih tzu for sale gurgaon, dog seller in gurgaon, buy puppies gurugram, best pet shop gurgaon, 8178413047",
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       {
@@ -289,10 +289,10 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Buy healthy, vaccinated Golden Retriever, Beagle, Labrador, Shih Tzu, and French Bulldog puppies for sale in Gurugram & Gurgaon. Call 9870166623.",
+          "Buy healthy, vaccinated Golden Retriever, Beagle, Labrador, Shih Tzu, and French Bulldog puppies for sale in Gurugram & Gurgaon. Call 8178413047.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:phone_number", content: "9870166623" },
+      { property: "og:phone_number", content: "8178413047" },
       { property: "og:locality", content: "Gurugram" },
       { property: "og:region", content: "Haryana" },
       { property: "og:country_name", content: "India" },
@@ -303,7 +303,7 @@ export const Route = createFileRoute("/")({
       },
       {
         name: "twitter:description",
-        content: "Healthy, vaccinated puppies for sale in Gurgaon & Gurugram. Call 9870166623.",
+        content: "Healthy, vaccinated puppies for sale in Gurgaon & Gurugram. Call 8178413047.",
       },
     ],
     scripts: [
@@ -973,7 +973,7 @@ function Index() {
         rel="noreferrer"
         className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-emerald-600 p-2.5 text-white shadow-2xl transition-all duration-300 hover:scale-110 hover:bg-emerald-500 active:scale-95 group focus:outline-none focus:ring-4 focus:ring-emerald-300"
         aria-label="Chat on WhatsApp"
-        title="Chat on WhatsApp (9870166623)"
+        title="Chat on WhatsApp (+91 81784 13047)"
       >
         <span className="hidden sm:inline-block max-w-0 overflow-hidden whitespace-nowrap text-sm font-semibold transition-all duration-300 group-hover:max-w-xs group-hover:pl-3 group-hover:pr-1">
           Chat on WhatsApp
