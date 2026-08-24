@@ -10,13 +10,13 @@ const BEAGLE_IMG =
 const LABRADOR_IMG =
   "https://tse3.mm.bing.net/th/id/OIP.wTKob21_rDSXihUsvbLECwHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3";
 
-const PHONE = "7678494050";
-const PHONE_DISPLAY = "+91 76784 94050";
-const WHATSAPP_LINK = `https://wa.me/917678494050?text=Hi%20Gurgaon%20Puppy%20Point!%20I%20am%20interested%20in%20a%20puppy.`;
+const PHONE = "9870166623";
+const PHONE_DISPLAY = "+91 98701 66623";
+const WHATSAPP_LINK = `https://wa.me/91${PHONE}?text=Hi%20Gurgaon%20Puppy%20Point!%20I%20am%20interested%20in%20a%20puppy.`;
 
 const getBreedWhatsAppLink = (breedName: string) => {
   const message = `Hi Gurgaon Puppy Point! I am interested in a ${breedName} puppy. Please share photos, price, and availability details.`;
-  return `https://wa.me/917678494050?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/91${PHONE}?text=${encodeURIComponent(message)}`;
 };
 
 const PUPPIES = [
@@ -218,7 +218,7 @@ const SCHEMA_LOCAL_BUSINESS = {
   name: "Gurgaon Puppy Point",
   image: GOLDEN_RETRIEVER_IMG,
   url: "https://gurgaonpuppypoint.com",
-  telephone: "+917678494050",
+  telephone: `+91${PHONE}`,
   priceRange: "₹20,000 - ₹80,000",
   address: {
     "@type": "PostalAddress",
@@ -279,12 +279,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Buy healthy, purebred, vaccinated puppies for sale in Gurgaon & Gurugram. Golden Retriever, Labrador, Beagle, Shih Tzu, French Bulldog, Husky & more for sale at Gurgaon Puppy Point. Call 7678494050.",
+          `Buy healthy, purebred, vaccinated puppies for sale in Gurgaon & Gurugram. Golden Retriever, Labrador, Beagle, Shih Tzu, French Bulldog, Husky & more for sale at Gurgaon Puppy Point. Call ${PHONE}.`,
       },
       {
         name: "keywords",
         content:
-          "puppies for sale in gurgaon, puppies for sale in gurugram, buy puppies in gurgaon, buy dogs in gurgaon, dog shop in gurgaon, dog breeder gurugram, golden retriever puppy for sale gurgaon, labrador puppy for sale gurgaon, beagle puppy for sale gurgaon, shih tzu for sale gurgaon, dog seller in gurgaon, buy puppies gurugram, best pet shop gurgaon, 7678494050",
+          `puppies for sale in gurgaon, puppies for sale in gurugram, buy puppies in gurgaon, buy dogs in gurgaon, dog shop in gurgaon, dog breeder gurugram, golden retriever puppy for sale gurgaon, labrador puppy for sale gurgaon, beagle puppy for sale gurgaon, shih tzu for sale gurgaon, dog seller in gurgaon, buy puppies gurugram, best pet shop gurgaon, ${PHONE}`,
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       {
@@ -294,10 +294,10 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Buy healthy, vaccinated Golden Retriever, Beagle, Labrador, Shih Tzu, and French Bulldog puppies for sale in Gurugram & Gurgaon. Call 7678494050.",
+          `Buy healthy, vaccinated Golden Retriever, Beagle, Labrador, Shih Tzu, and French Bulldog puppies for sale in Gurugram & Gurgaon. Call ${PHONE}.`,
       },
       { property: "og:type", content: "website" },
-      { property: "og:phone_number", content: "7678494050" },
+      { property: "og:phone_number", content: PHONE },
       { property: "og:locality", content: "Gurugram" },
       { property: "og:region", content: "Haryana" },
       { property: "og:country_name", content: "India" },
@@ -308,7 +308,7 @@ export const Route = createFileRoute("/")({
       },
       {
         name: "twitter:description",
-        content: "Healthy, vaccinated puppies for sale in Gurgaon & Gurugram. Call 7678494050.",
+        content: `Healthy, vaccinated puppies for sale in Gurgaon & Gurugram. Call ${PHONE}.`,
       },
     ],
     scripts: [
@@ -1001,7 +1001,7 @@ function Index() {
         rel="noreferrer"
         className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-emerald-600 p-2.5 text-white shadow-2xl transition-all duration-300 hover:scale-110 hover:bg-emerald-500 active:scale-95 group focus:outline-none focus:ring-4 focus:ring-emerald-300"
         aria-label="Chat on WhatsApp"
-        title="Chat on WhatsApp (+91 76784 94050)"
+        title={`Chat on WhatsApp (${PHONE_DISPLAY})`}
       >
         <span className="hidden sm:inline-block max-w-0 overflow-hidden whitespace-nowrap text-sm font-semibold transition-all duration-300 group-hover:max-w-xs group-hover:pl-3 group-hover:pr-1">
           Chat on WhatsApp
