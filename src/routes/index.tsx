@@ -10,8 +10,8 @@ const BEAGLE_IMG =
 const LABRADOR_IMG =
   "https://tse3.mm.bing.net/th/id/OIP.wTKob21_rDSXihUsvbLECwHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3";
 
-const PHONE = "9870166623";
-const PHONE_DISPLAY = "+91 98701 66623";
+const PHONE = "6302231051";
+const PHONE_DISPLAY = "+91 63022 31051";
 const WHATSAPP_LINK = `https://wa.me/91${PHONE}?text=Hi%20Gurgaon%20Puppy%20Point!%20I%20am%20interested%20in%20a%20puppy.`;
 
 const getBreedWhatsAppLink = (breedName: string) => {
